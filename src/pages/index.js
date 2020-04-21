@@ -20,7 +20,7 @@ const IndexPage = () => {
               }
               title
               fluid(maxWidth: 700, quality: 50) {
-                ...GatsbyContentfulFluid
+                ...GatsbyContentfulFluid_withWebp_noBase64
               }
             }
             addToHomepage
