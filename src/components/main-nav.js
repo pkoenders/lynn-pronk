@@ -5,6 +5,7 @@ import "./main-nav-sticky.scss"
 import mainNavStyles from "./main-nav.module.scss"
 
 const MainNav = () => {
+
   return (
     <nav id="myTopnav">
 
