@@ -19,7 +19,7 @@ const IndexPage = () => {
                 url 
               }
               title
-              fluid(maxWidth: 700, quality: 50) {
+              fluid(maxWidth: 400, quality: 50) {
                 ...GatsbyContentfulFluid_withWebp_noBase64
               }
             }
