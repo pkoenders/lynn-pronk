@@ -1,0 +1,17 @@
+#myTopnav {
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  //width: 100%;
+
+  background-color: rgba(43, 42, 43, 0.98);
+  transition: all 0.5s ease-in-out;
+}
