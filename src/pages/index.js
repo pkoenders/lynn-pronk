@@ -19,8 +19,8 @@ const IndexPage = () => {
                 url 
               }
               title
-              fluid(maxWidth: 500, quality: 100) {
-                ...GatsbyContentfulFluid_withWebp
+              fluid(maxWidth: 700, quality: 50) {
+                ...GatsbyContentfulFluid
               }
             }
             addToHomepage
