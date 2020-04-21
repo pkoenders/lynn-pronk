@@ -21,17 +21,14 @@
   z-index: 5;
 
   a {
-    background: hsl(0, 0%, 96%);
-    color: #000000;
     display: block;
     //position: absolute;
     text-decoration: none;
-    overflow: hidden;
+    //overflow: hidden;
     img {
-      margin: 0;
       //filter: blur(1px);
 
-      display: flex;
+      //display: flex;
     }
   }
   a:hover {
@@ -41,6 +38,8 @@
   }
 
   h2 {
+    background: hsl(0, 0%, 96%);
+    color: #000000;
     line-height: 1;
     margin: 0;
     padding: 0.5rem;
