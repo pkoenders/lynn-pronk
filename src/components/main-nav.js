@@ -7,7 +7,6 @@ const MainNav = () => {
 
   return (
     <nav id="myTopnav">
-
       <ul className={mainNavStyles.navList}>
         {/* <li>
           <Link
