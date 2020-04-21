@@ -16,7 +16,7 @@
   transition: all 0.1s ease;
   flex: 0 0 calc(33.33% - 30px);
 
-  border: 1px solid transparent;
+  //border: 1px solid transparent;
   transition: all 0.2s ease-in-out;
   z-index: 5;
 
@@ -26,10 +26,10 @@
     display: block;
     //position: absolute;
     text-decoration: none;
+    overflow: hidden;
     img {
       margin: 0;
       //filter: blur(1px);
-      overflow: hidden;
 
       display: flex;
     }
@@ -53,10 +53,11 @@
   }
 }
 .post:hover {
-  box-shadow: 5px 6px 10px 4px black;
+  box-shadow: 0 0 13px 5px black;
   transform: scale(1.05) rotate(2deg);
+  cursor: pointer;
   //border: 1px solid #c7419c;
-  border: 1px solid #ffffff;
+  //border: 1px solid #ffffff;
   a {
     img {
       //filter: blur(0px);
@@ -64,7 +65,7 @@
   }
 }
 .post:before {
-  content: "";
+  content: '';
   height: 100%;
   left: 0;
   top: 0;

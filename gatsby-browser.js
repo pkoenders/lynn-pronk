@@ -41,7 +41,7 @@ function blogListHover() {
         e.addEventListener('mouseover', () => {
             var precision = 1000; // 3 decimals
             //var spin = Math.floor(Math.random() * (4.00));
-            var spin = Math.floor(Math.random() * (4.00 * precision - 1 * precision) + 1 * precision) / (1 * precision);
+            var spin = Math.floor(Math.random() * (3.00 * precision - 1 * precision) + 1 * precision) / (1 * precision);
             spin *= Math.floor(Math.random() * 2) === 1 ? 1 : -1;
             e.style.transform = 'rotate(' + spin + 'deg)';
             //console.log("Spin val =" + spin)

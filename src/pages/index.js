@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import blogStyles from "./blog.module.scss"
 
 const IndexPage = () => {
@@ -14,10 +15,13 @@ const IndexPage = () => {
             title
             PublishedDate(formatString: "MMMM Do, YYYY")
             imagePreview {
-              file {
-                url
+              file {  
+                url 
               }
               title
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyContentfulFluid_withWebp
+              }
             }
             addToHomepage
           }
@@ -37,7 +41,8 @@ const IndexPage = () => {
               <li className={blogStyles.post}>
                 <Link to={`/blog/${edge.node.slug}`}>
                   {/* <p>{edge.node.imagePreview.file.url}</p> */}
-                  <img
+                  <Img
+                    fluid={edge.node.imagePreview.fluid}
                     alt={edge.node.imagePreview.title}
                     src={edge.node.imagePreview.file.url}
                   />
