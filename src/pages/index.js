@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import { Link, useStaticQuery, graphql } from "gatsby"
+import Helmet from 'react-helmet'
 import Img from "gatsby-image"
 import blogStyles from "./blog.module.scss"
 
@@ -32,6 +33,17 @@ const IndexPage = () => {
 
   return (
     <Layout>
+
+      <Helmet
+        title="Gatsby Default Starter"
+        meta={[
+          { name: 'description', content: 'Sample' },
+          { name: 'keywords', content: 'sample, something' },
+        ]}
+      >
+        <html lang="en" />
+      </Helmet>
+
       <Head title="Home" />
 
       <ol id="myBlogList" className={blogStyles.posts}>
