@@ -222,6 +222,10 @@ textarea {
 
 input:hover,
 input:focus,
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -537,7 +541,7 @@ form {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 noscript {
   margin-left: 0;

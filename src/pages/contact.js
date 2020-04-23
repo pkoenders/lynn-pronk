@@ -26,6 +26,7 @@ I will always reply.</p>
           <div className={contactStyles.contactFormInput}>
             <form
               method="post"
+              action="/contact-success"
               netlify-honeypot="bot-field"
               data-netlify="true"
               name="lynn-pronk-contact"
@@ -34,13 +35,13 @@ I will always reply.</p>
               <p>
                 <label>
                   <span>Name (required)</span>
-                  <input type="text" name="name" id="name" />
+                  <input type="text" name="name" id="name" required />
                 </label>
               </p>
               <p>
                 <label>
                   <span>Email (required)</span>
-                  <input type="email" name="email" id="email" />
+                  <input type="email" name="email" id="email" required />
                 </label>
               </p>
               <p>

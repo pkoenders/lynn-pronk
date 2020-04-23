@@ -9,7 +9,8 @@ body {
   margin: 0 auto;
   //display: flex;
 }
-
+.contactFormSucess {
+}
 .contactFormWrapper {
   display: block;
   background-color: #e6e2e2;
@@ -19,7 +20,6 @@ body {
     width: 100%;
     p {
       display: flex;
-      align-items: center;
       justify-content: center;
       label {
         width: 100%;
@@ -42,5 +42,20 @@ body {
       // button {
       // }
     }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contactFormSucess {
+  h2,
+  span,
+  p {
+    display: flex;
+    justify-content: center;
+  }
+  span {
+    margin-bottom: 2rem;
   }
 }

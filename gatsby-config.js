@@ -16,6 +16,16 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
 
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /svg/
+        }
+      }
+    },
+
+
+    {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
