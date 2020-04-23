@@ -1,10 +1,11 @@
-import React from "react"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import IndexBGroundImg from '../components/index-bground-img'
+import Layout from '../components/layout'
+import Head from '../components/head'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import Img from "gatsby-image"
-import blogStyles from "./blog.module.scss"
+import Img from 'gatsby-image'
+import blogStyles from './blog.module.scss'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -16,8 +17,8 @@ const IndexPage = () => {
             title
             PublishedDate(formatString: "MMMM Do, YYYY")
             imagePreview {
-              file {  
-                url 
+              file {
+                url
               }
               title
               fluid(maxWidth: 360, quality: 50) {
@@ -29,11 +30,10 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <Layout>
-
+    <div>
       <Helmet
         title="Gatsby Default Starter"
         meta={[
@@ -43,39 +43,43 @@ const IndexPage = () => {
       >
         <html lang="en" />
       </Helmet>
-
       <Head title="Home" />
+      <IndexBGroundImg />
+      <Layout>
+        <ol id="myBlogList" className={blogStyles.posts}>
+          {data.allContentfulBlogPost.edges.map((edge) => {
+            return (
+              edge.node.addToHomepage === true && (
+                <li className={blogStyles.post}>
+                  <Link to={`/blog/${edge.node.slug}`}>
+                    {/* <p>{edge.node.imagePreview.file.url}</p> */}
+                    <Img
+                      fluid={edge.node.imagePreview.fluid}
+                      alt={edge.node.imagePreview.title}
+                      src={edge.node.imagePreview.file.url}
+                    />
+                    <h2>{edge.node.title}</h2>
 
-      <ol id="myBlogList" className={blogStyles.posts}>
-        {data.allContentfulBlogPost.edges.map(edge => {
-          return (
-            edge.node.addToHomepage === true && (
-              <li className={blogStyles.post}>
-                <Link to={`/blog/${edge.node.slug}`}>
-                  {/* <p>{edge.node.imagePreview.file.url}</p> */}
-                  <Img
-                    fluid={edge.node.imagePreview.fluid}
-                    alt={edge.node.imagePreview.title}
-                    src={edge.node.imagePreview.file.url}
-                  />
-                  <h2>{edge.node.title}</h2>
+                    {/* <img alt={edge.node.imagePreview.title} src={edge.node.imagePreview.file.url} /> */}
+                    {/* <p>{edge.node.PublishedDate}</p> */}
+                  </Link>
+                </li>
+              )
+            );
+          })}
+        </ol>
 
-                  {/* <img alt={edge.node.imagePreview.title} src={edge.node.imagePreview.file.url} /> */}
-                  {/* <p>{edge.node.PublishedDate}</p> */}
-                </Link>
-              </li>
-            )
-          )
-        })}
-      </ol>
+        <h2>Hello.</h2>
+        <h3>
+          I'm Pete, a designer living in Palmerston North. Choose me $$$$ !!!!
+          @@@@
+        </h3>
 
-      <h2>Hello.</h2>
-      <h3>
-        I'm Pete, a designer living in Palmerston North. Choose me $$$$ !!!!
-        @@@@
-      </h3>
-    </Layout>
-  )
-}
+      </Layout>
 
-export default IndexPage
+
+    </div>
+  );
+};
+
+export default IndexPage;

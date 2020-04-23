@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Lynn Pronk Portfolio",
+    title: "Lynn Pronk - Contentful",
     author: "Peter G Koenders",
     year: "2020",
   },
