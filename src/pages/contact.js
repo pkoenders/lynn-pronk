@@ -18,7 +18,7 @@ const ContactPage = () => {
       <p>The page to contact me.</p>
 
 
-      <form method="post" netlify-honeypot="bot-field" data-netlify="true">
+      <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="lynn-pronk-contact">
         <input type="hidden" name="bot-field" />
         <label>
           Name
